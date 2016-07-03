@@ -1,0 +1,8 @@
+main: fr.oramni.factionranking.FactionRanking
+name: FactionRanking
+version: 0.1
+author: Oramni
+description: §eThanks for buying this plugin it helps me alot, for updates go on spigot
+commands:
+    factionranking:
+        description: 

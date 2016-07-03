@@ -1,0 +1,33 @@
+# Plugin created by Oramni
+# Twitter: @xOramni
+# Youtube (FR) : Oramni
+
+# Made with something that is not love <3
+
+# Database Settings
+# Be careful to read the spigot page for the installation
+
+# Messages settings
+# Here are a few variables: %p% = Player Name, %f% = Faction Name
+
+# in servername put the name you want to be displayed on the website
+# in login put a password for the website
+host: localhost
+database: database
+username: root
+password: password
+
+prefix: '&e[&6FactionRanking&e]'
+createfaction: '&eYou have created the faction: &6%f%'
+disbandfaction: '&eYou have disband the faction: &6%f%'
+modifyfactiondesc: '&6You have changed the faction description.'
+joinfaction: '&eYou have just joined the faction: &6%f%'
+kickfaction: '&eYou have been kicked from the faction: &6%f%'
+leavefaction: '&eYou have left the faction: &6%f%'
+pluskill: '&e+1 Kill'
+plusdeath: '&e+1 Death'
+pluspoint: '&e+1 Faction Point'
+minuspoint: '&e-1 Faction Point'
+nopoint: '&cYour faction does not have any points.'
+login: 'unicorn'
+servername: 'Hypixel'
