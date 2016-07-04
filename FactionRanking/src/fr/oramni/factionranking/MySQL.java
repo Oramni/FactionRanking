@@ -132,14 +132,11 @@ public class MySQL {
 	
 	}
 	
-	public void setSettings(String name, String login){
+	public void setSettings(String name){
 		try{		
 				PreparedStatement sts2 = getConnection().prepareStatement("UPDATE "+settings+" SET name = ? WHERE id = 1");
 				sts2.setString(1, name);
 				sts2.executeUpdate();
-				PreparedStatement sts3 = getConnection().prepareStatement("UPDATE "+settings+" SET login = ? WHERE id = 1");
-				sts3.setString(1, login);
-				sts3.executeUpdate();
 			
 		}catch(SQLException e){
 			e.printStackTrace();

@@ -25,7 +25,6 @@ public class FactionRanking extends JavaPlugin {
 	public static String pluspoint;
 	public static String minuspoint;
 	public static String nopoint;
-	public static String login;
 	public static String servername;
 	
 	public static MySQL api;
@@ -77,14 +76,13 @@ public class FactionRanking extends JavaPlugin {
 		pluspoint = traduc(getConfig().getString("pluspoint"));
 		minuspoint = traduc(getConfig().getString("minuspoint"));
 		nopoint = traduc(getConfig().getString("nopoint"));
-		login = traduc(getConfig().getString("login"));
 		servername = traduc(getConfig().getString("servername"));
 		api = new MySQL("jdbc:mysql://", host, database, username, password);
 		api.connection();
 		api.createTableFactions();
 		api.createTableUsers();
 		api.createTableSettings();
-		api.setSettings(servername, login);
+		api.setSettings(servername);
 	}
 	
 	@Override
@@ -102,7 +100,7 @@ public class FactionRanking extends JavaPlugin {
 			}
 			if(p.hasPermission("factionranking.reload")){
 			if(args[0].equalsIgnoreCase("reload")){
-				api.setSettings(servername, login);
+				api.setSettings(servername);
 				reloadConfig();
 				p.sendMessage(prefix + "§cConfig reloading.");
 				p.sendMessage(prefix + "§cConfig reloading..");
