@@ -1,13 +1,14 @@
 package fr.oramni.factionranking;
 
+import java.io.IOException;
 import java.util.logging.Logger;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
-
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.spigotmc.Metrics;
 
 import fr.oramni.factionranking.events.EventManager;
 
@@ -55,6 +56,12 @@ public class FactionRanking extends JavaPlugin {
 		logger.info("This plugin version is: " + pdfFile.getVersion());
 		logger.info("=========================[FactionRanking]=========================");
 		registerConfig();
+		 try {
+		        Metrics metrics = new Metrics();
+		        metrics.start();
+		    } catch (IOException e) {
+		        e.printStackTrace();
+		    }
 	}
 	
 	private void registerConfig(){

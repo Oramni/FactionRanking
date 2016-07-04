@@ -15,7 +15,6 @@ host: localhost
 database: database
 username: root
 password: password
-
 prefix: '&e[&6FactionRanking&e]'
 createfaction: '&eYou have created the faction: &6%f%'
 disbandfaction: '&eYou have disband the faction: &6%f%'
